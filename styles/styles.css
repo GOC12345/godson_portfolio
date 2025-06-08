@@ -722,7 +722,7 @@ section {
   letter-spacing: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1432px) {
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -783,7 +783,7 @@ section {
     margin-top: 1.5rem;
   }
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1432px) {
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -806,7 +806,7 @@ section {
     font-size: 4.5rem;
   }
 }
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1432px) {
   header {
     padding: 0;
   }
@@ -853,7 +853,7 @@ section {
     padding: 7rem 6rem;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1432px) {
   .section {
     padding: 7rem 3rem;
   }
