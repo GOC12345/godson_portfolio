@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1432px){
 
 
 .about-container{
@@ -76,7 +76,7 @@
 }
 }
 
-@media screen and (max-width: 1070px){
+@media screen and (max-width: 1432px){
     .about-container{
         grid-template-columns: 1fr;
         .right-about{
@@ -102,7 +102,7 @@
     }
 }
 
-@media screen and (max-width: 970px){
+@media screen and (max-width: 1432px){
         header{
         padding: 0;
     }
@@ -159,7 +159,7 @@
     }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1432px){
     .section{
         padding: 7rem 3rem;
     }
@@ -180,4 +180,24 @@
         }
     }
 
+}
+
+@media screen and (max-width: 600px){
+    .portfolios{
+        grid-template-columns: 1fr;
+    }
+    .blogs{
+        grid-template-columns: 1fr;
+    }
+    .main-title{
+        h2{
+            font-size:3rem;
+            span{
+                font-size: 3rem;
+            }
+            .bg-text{
+                font-size: 2.5rem;
+            }
+        }
+    }
 }
