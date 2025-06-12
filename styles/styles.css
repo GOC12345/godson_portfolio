@@ -289,7 +289,7 @@ section {
   color: var(--color-grey-1);
 }
 .about-container .left-about h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -348,6 +348,15 @@ section {
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
   width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Ms {
+  width: 85%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Ae {
+  width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Ai {
+  width: 80%;
 }
 
 .stat-title {
