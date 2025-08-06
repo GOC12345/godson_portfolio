@@ -41,40 +41,44 @@
         })
     }
 
-  const titles = ["Web Developer.", "Logo Creator.", "Digital Creative."];
-  const nameHTML = `Hi, I'm <span>Godson O. Chibueze</span> <br>`;
-  const titleElement = document.querySelector(".right-header .name");
-  
-  let titleIndex = 0;
-  let charIndex = 0;
-  let typing = true;
-  
-  function typeEffect() {
-    if (typing) {
-      // Typing forward
-      if (charIndex <= titles[titleIndex].length) {
-        titleElement.innerHTML = nameHTML + titles[titleIndex].substring(0, charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 100); // speed of typing
-      } else {
-        typing = false;
-        setTimeout(typeEffect, 1500); // pause before deleting
-      }
+const titles = ["Web Developer.", "Logo Creator.", "Digital Creative."];
+const titleElement = document.querySelector(".title-text");
+
+let titleIndex = 0;
+let charIndex = 0;
+let typing = false;
+let dotCount = 0;
+
+function showDotsBeforeTyping() {
+  if (dotCount <= 3) {
+    const dots = ".".repeat(dotCount);
+    titleElement.innerHTML = `<span style="opacity: 0.6">${dots}</span>`;
+    dotCount++;
+    setTimeout(showDotsBeforeTyping, 200);
+  } else {
+    dotCount = 0;
+    typing = true;
+    charIndex = 0;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+function typeEffect() {
+  if (typing) {
+    const currentTitle = titles[titleIndex];
+    if (charIndex <= currentTitle.length) {
+      titleElement.textContent = currentTitle.substring(0, charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 100);
     } else {
-      // Deleting
-      if (charIndex >= 0) {
-        titleElement.innerHTML = nameHTML + titles[titleIndex].substring(0, charIndex);
-        charIndex--;
-        setTimeout(typeEffect, 50); // speed of deleting
-      } else {
-        typing = true;
-        titleIndex = (titleIndex + 1) % titles.length;
-        setTimeout(typeEffect, 500); // pause before typing next title
-      }
+      typing = false;
+      titleIndex = (titleIndex + 1) % titles.length;
+      setTimeout(showDotsBeforeTyping, 1500);
     }
   }
-  
-  typeEffect();
+}
+
+showDotsBeforeTyping();
 
   
 

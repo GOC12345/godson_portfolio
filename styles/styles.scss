@@ -54,7 +54,7 @@ header{
 
 section{
     min-height: 100vh;
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -222,6 +222,10 @@ section{
             span{
                 color: var(--color-secondary);
             }
+            .title-text {
+                display: inline-block;
+                min-width: 200px; /* adjust based on your longest title */
+}
         }
 
         p{
@@ -543,6 +547,7 @@ section{
 .blogs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
     grid-gap: 2rem;
     margin: 3rem;
 
