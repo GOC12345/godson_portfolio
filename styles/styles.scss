@@ -538,6 +538,9 @@ section{
 }
 
 .porfolio-item:hover .hover-items{
+    h3{
+        text-align: center;
+    }
     opacity: 1;
     transform: scale(1);
 }

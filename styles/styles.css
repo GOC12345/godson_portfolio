@@ -512,6 +512,9 @@ section {
   opacity: 1;
   transform: scale(1);
 }
+.porfolio-item:hover .hover-items h3 {
+  text-align: center;
+}
 
 /*Blogs Section*/
 .blogs {
